@@ -147,8 +147,8 @@
 														<div class="col-xs-12 col-md-6">
 
 															<a class="btn btn-primary" href="#">
-																<i class="fa fa-shopping-cart"></i>
-																&nbsp; Add to cart</a>
+																<i class="fa  fa-cart-arrow-down" style="font-size:23px;"aria-hidden="true"></i>
+																&nbsp; Add to Cart</a>
 
 														</div>
 													</div>
