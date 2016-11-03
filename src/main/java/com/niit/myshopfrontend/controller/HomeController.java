@@ -25,6 +25,10 @@ public class HomeController {
 	  public String goToAbout() {
 		 return "About";
 	 }
+	 @RequestMapping("/productDetail")
+	  public String getDetails() {
+		 return "Details";
+	 }
 	 @RequestMapping("/Admin")
 	  public String goToAdmin() {
 		 return "AdminHome";

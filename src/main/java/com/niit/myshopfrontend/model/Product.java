@@ -15,6 +15,15 @@ public class Product {
 		this.category = string;
 		this.price = d1;
 	}
+	public Product(String string0 ,String string, String string2, String string3, double d1 , boolean status ) {
+		// TODO Auto-generated constructor stub
+		this.productID = string0;
+		this.productName = string2;
+		this.category = string;
+		this.productDesc = string3;
+		this.price = d1;
+		this.available= status;
+	}
 	public String getProductID() {
 		return productID;
 	}

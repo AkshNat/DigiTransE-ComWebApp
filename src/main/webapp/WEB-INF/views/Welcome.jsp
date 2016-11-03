@@ -17,9 +17,22 @@
 <body>
 	<%@ include file="Header.jsp" %>
 <div class="container" style="margin-top:80px;">
-
+    <div class="col-md-5">
+<div class="col-md-41w">
+<h3 class="">Manage Orders</h3>
+<div class="list-group">
+<a href="account.html" class="list-group-item">All Order</a>
+<a href="account.html" class="list-group-item">Manage
+Feedback</a>
+<a href="account.html" class="list-group-item">My Coupons</
+a>
+<a href="account.html" class="list-group-item">My Shipping
+Address</a>
+</div>
+</div>
+</div>
     <!-- Main component for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron col-md-7">
         <c:choose>
             <c:when test="${not empty sessionScope.Name }">
                 <h1>Hello! how are you ${sessionScope.Name}?</h1>
@@ -38,6 +51,7 @@
         </c:choose>
 
     </div>
+
 </div>
 <%@ include file="Footer.jsp" %>
 </body>

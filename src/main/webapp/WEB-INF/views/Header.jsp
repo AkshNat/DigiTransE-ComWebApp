@@ -61,15 +61,17 @@
 		          <li><a href="Products?val=cat3">Accessories</a></li>
 		          <li class="divider"></li>
 		          <li><a href="Products?val=cat4">Watches</a></li>
-		          <li class="divider"></li>
 		          <li><a href="Products?val=cat5">Memory Sticks</a></li>
+		          <li class="divider"></li>
+		          <li><a href="Products?val=all">All Categories</a></li>
 		        </ul>
      		</li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
 				<c:choose>
 				    <c:when test="${not empty sessionScope.Name }">
-				    	<li><a href="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp; My Cart</a></li>
+				    	<li><a href="#">My Cart&nbsp;<span class="badge pull-right">4</span><i class="glyphicon glyphicon-shopping-cart"></i> </a></li>
+				    	
 				        <li><a href="logout"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
 				    </c:when>
 				    <c:otherwise>

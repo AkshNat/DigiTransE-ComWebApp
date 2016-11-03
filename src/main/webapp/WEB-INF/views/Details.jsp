@@ -1,0 +1,91 @@
+<%@ page language="java" contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<html>
+<head>
+
+<title>MyShop.in | Electronics World</title>
+
+		<link rel="shortcut icon" href="bootstrap/img/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="bootstrap/img/favicon.ico" type="image/x-icon">
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="bootstrap/css/bootstrap-social.css" rel="stylesheet" type="text/css" />
+<link href="bootstrap/css/custom-style.css" rel="stylesheet" type="text/css" />
+<link href="bootstrap/css/landing.css" rel="stylesheet" type="text/css" />
+<link href="bootstrap/fonts/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="bootstrap/js/jquery-3.0.0.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<style>
+
+	#ratings{
+		
+		color:#FFD700;
+		font-size: 19px;
+		
+		
+	}
+	
+	#review{
+		color: #c44133;
+	}
+
+</style>
+</head>
+
+<body>
+<%@ include file="Header.jsp" %>
+	<div class="container" style="margin-top:80px;">
+   <div class="col-md-6 ">
+   
+    <img src="bootstrap/img/productImage.jpg" alt="Kodak Brownie Flash B Camera" width="100%" height="400px" class="image-responsive"/>
+    <div class="row">
+    	<div class="col-md-6"><a class="btn btn-block btn-social btn-lg btn-primary"><span class="fa fa-heart"></span> Add to Wishlist</a></div>
+    	<div class="col-md-6"><a class="btn btn-block btn-social btn-lg btn-openid"><span class="fa fa-envelope"></span> Mail to a Friend</a></div>
+    </div>
+    <div class="row">
+   
+    	<div class="text-center center-block">
+    			
+    			 
+    			<div class="col-md-3"><a class="btn btn-block btn-social btn-xs btn-facebook"><span class="fa fa-facebook"></span> Share</a></div> 
+    			<div class="col-md-3"><a class="btn btn-block btn-social btn-xs btn-twitter"><span class="fa fa-twitter"></span>Tweet</a></div>
+    			<div class="col-md-3"><a class="btn btn-block btn-social btn-xs btn-google" ><i class="fa fa-google"></i>Post</a></div>    			
+    			<div class="col-md-3"><a class="btn btn-block btn-social btn-xs btn-pinterest"><span class="fa fa-pinterest"></span> Pin It!</a></div>
+    			 <!-- a class="btn  btn-social-icon btn-lg btn-openid"><span class="fa fa-envelope fa-2x"></span></a--> 
+                </div>
+    </div>
+   </div>
+   <div class="col-md-6">
+    <h5><a>Kodak Astro Zoom AZ521-BK Digital Camera with 52x Optical Image Stabilized Zoom</a></h5> 
+
+    
+    <div class="row1" style="padding-left:">  
+    	<div class="pull-left">
+    		<b>By Kodak</b>	
+    	</div>
+    	    <div class="pull-right col-md-7 " style="padding-top:0px;" align="right">
+    
+    	<div id="ratings"><span style=" color:#2c3e50;"><b>Product Ratings:</b></span>
+    	<i class="fa fa-star" aria-hidden="true"></i>
+    	<i class="fa fa-star" aria-hidden="true"></i>
+    	<i class="fa fa-star" aria-hidden="true"></i>
+    	<i class="fa fa-star" aria-hidden="true"></i>
+    	<i class="fa fa-star-half-o" aria-hidden="true"></i>
+    	</div>
+    	<a href="#"><span id="review"> Read User Reviews <i class="fa fa-pencil" aria-hidden="true"></i></span></a>
+    </div>
+    </div>
+
+   </div>
+
+
+	</div>
+
+<%@ include file="Footer.jsp" %>
+
+</body>
+
+</html>

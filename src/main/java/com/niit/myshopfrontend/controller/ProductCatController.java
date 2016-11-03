@@ -9,6 +9,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.google.gson.Gson;
 import com.niit.myshopfrontend.dao.ProductDAOImpl;
 import com.niit.myshopfrontend.model.Product;
 
@@ -38,7 +39,13 @@ public class ProductCatController {
 		
 		ProductDAOImpl pdi = new ProductDAOImpl();
 		List<Product> list = pdi.getProduct();
+		
+		Gson gson = new Gson();
+		String json;
+		json = gson.toJson(list);
+		System.out.println(json);
 		model.addAttribute("lists", list);
+//		model.addAttribute("lists", json);
 		return "Products";
 		
 	}
