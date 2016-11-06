@@ -31,6 +31,17 @@
 	#review{
 		color: #c44133;
 	}
+	
+	.btn-mail{
+		background-color: #2c3e50;
+		color: #ffffb1;
+	}
+	
+	.row{padding-top:  20px;}
+	
+	.panel-row-border {
+	padding-top: 10px; padding-bottom: 10px; border-right: 1px solid #2c3e50; border-radius: 10px; border-top: 1px solid #2c3e50; border-bottom: 1px solid #2c3e50; 
+	}
 
 </style>
 </head>
@@ -38,12 +49,12 @@
 <body>
 <%@ include file="Header.jsp" %>
 	<div class="container" style="margin-top:80px;">
-   <div class="col-md-6 ">
+   <div class="col-md-6 panel panel-row-border">
    
-    <img src="bootstrap/img/productImage.jpg" alt="Kodak Brownie Flash B Camera" width="100%" height="400px" class="image-responsive"/>
+    <div class="row1"><img src="bootstrap/img/productImage.jpg" alt="Kodak Brownie Flash B Camera" width="100%" height="400px" class="image-responsive"/></div>
     <div class="row">
     	<div class="col-md-6"><a class="btn btn-block btn-social btn-lg btn-primary"><span class="fa fa-heart"></span> Add to Wishlist</a></div>
-    	<div class="col-md-6"><a class="btn btn-block btn-social btn-lg btn-openid"><span class="fa fa-envelope"></span> Mail to a Friend</a></div>
+    	<div class="col-md-6"><a class="btn btn-block btn-social btn-lg btn-danger"><span class="fa fa-envelope"></span> Mail to a Friend</a></div>
     </div>
     <div class="row">
    
@@ -58,7 +69,7 @@
                 </div>
     </div>
    </div>
-   <div class="col-md-6">
+   <div class="col-md-6 panel">
     <h5><a>Kodak Astro Zoom AZ521-BK Digital Camera with 52x Optical Image Stabilized Zoom</a></h5> 
 
     

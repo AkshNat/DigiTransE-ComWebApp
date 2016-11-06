@@ -10,13 +10,13 @@ public class Product {
 	private boolean available;
 	
 	public Product(String string, String string2, double d1) {
-		// TODO Auto-generated constructor stub
+		
 		this.productName = string2;
 		this.category = string;
 		this.price = d1;
 	}
 	public Product(String string0 ,String string, String string2, String string3, double d1 , boolean status ) {
-		// TODO Auto-generated constructor stub
+		
 		this.productID = string0;
 		this.productName = string2;
 		this.category = string;
