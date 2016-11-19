@@ -153,20 +153,19 @@
 						</div>
 					</div>
 					<div class="row bottom-rule">
-					    <div class="col-sm-12">
-					        <nav class="navbar navbar-default navbar-footer">
-					            <ul class="nav navbar-nav">
-					                <li><a href="#">Customer Care</a></li>
-					                <li><a href="#">Summer Lookbook</a></li>
-					                <li><a href="#">Gift Cards</a></li>
-					                <li><a href="#">About Best Store</a></li>
-					                <li><a href="#">Careers</a></li>
-					                <li><a href="#">Contact Us</a></li>
-					                <li><a href="#">The Best Journal</a></li>
-					            </ul>
-					        </nav>
-					    </div>
-					</div><!-- end row -->
+    <div class="col-sm-12">
+        <nav class="navbar navbar-default navbar-footer">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Customer Care</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">About Best Store</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">The Best Journal</a></li>
+            </ul>
+        </nav>
+    </div>
+</div><!-- end row -->
 					<div class="row leg-room">
 						<div class="col-md-12 text-center">
 							<h1 class="text-uppercase">MyShop Store</h1>

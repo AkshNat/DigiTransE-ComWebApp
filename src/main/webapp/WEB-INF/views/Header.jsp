@@ -56,12 +56,12 @@
             <li class="dropdown">
 		        <a class="dropdown-toggle"  data-toggle="dropdown" href="#">Categories&nbsp;<b class="caret"></b></a>
 		        <ul class="dropdown-menu">
-		          <li><a href="Products?val=cat1">Cameras</a></li>
-		          <li><a href="Products?val=cat2">Phones</a></li>
-		          <li><a href="Products?val=cat3">Accessories</a></li>
+		          <li><a href="Products?val=cam">Cameras</a></li>
+		          <li><a href="Products?val=phn">Phones</a></li>
+		          <li><a href="Products?val=acs">Accessories</a></li>
 		          <li class="divider"></li>
-		          <li><a href="Products?val=cat4">Watches</a></li>
-		          <li><a href="Products?val=cat5">Memory Sticks</a></li>
+		          <li><a href="Products?val=wtch">Watches</a></li>
+		          <li><a href="Products?val=usb">Memory Sticks</a></li>
 		          <li class="divider"></li>
 		          <li><a href="Products?val=all">All Categories</a></li>
 		        </ul>

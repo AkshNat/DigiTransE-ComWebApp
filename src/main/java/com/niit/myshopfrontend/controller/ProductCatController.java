@@ -23,22 +23,22 @@ public class ProductCatController {
 		
 		switch (cat)
 		{
-			case "cat1" : 	model.addAttribute("catname","Cameras");
+			case "cam" : 	model.addAttribute("catname","Cameras");
 							break;
-			case "cat2" : 	model.addAttribute("catname","Phones");
+			case "phn" : 	model.addAttribute("catname","Phones");
 							break;
-			case "cat3" : 	model.addAttribute("catname","Accessories");
+			case "acs" : 	model.addAttribute("catname","Accessories");
 							break;
-			case "cat4" : 	model.addAttribute("catname","Watches");
+			case "wtch" : 	model.addAttribute("catname","Watches");
 							break;
-			case "cat5" : 	model.addAttribute("catname","Memory Sticks");
+			case "usb" : 	model.addAttribute("catname","Memory Sticks");
 							break;
 			default : model.addAttribute("catname", "all Categories");
 					
 		}
 		
 		ProductDAOImpl pdi = new ProductDAOImpl();
-		List<Product> list = pdi.getProduct();
+		List<Product> list = pdi.getProductByCategory(cat);
 		
 		Gson gson = new Gson();
 		String json;

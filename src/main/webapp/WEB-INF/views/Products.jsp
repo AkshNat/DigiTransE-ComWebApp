@@ -105,11 +105,11 @@
 			<section>
 				<h3>Categories</h3>
 				<div class="list-group">
-					<a href="Products?val=cat3" class="list-group-item">Accessories</a>
-					<a href="Products?val=cat1" class="list-group-item">Cameras</a>
-					<a href="Products?val=cat2" class="list-group-item">SmartPhones</a>
-					<a href="Products?val=cat5" class="list-group-item">Memory sticks</a>
-					<a href="Products?val=cat4" class="list-group-item">Watches</a>
+					<a href="Products?val=acs" class="list-group-item">Accessories</a>
+					<a href="Products?val=cam" class="list-group-item">Cameras</a>
+					<a href="Products?val=phn" class="list-group-item">SmartPhones</a>
+					<a href="Products?val=usb" class="list-group-item">Memory sticks</a>
+					<a href="Products?val=wtch" class="list-group-item">Watches</a>
 				</div>
 			</section>
 		</div>

@@ -10,5 +10,7 @@ public interface ProductDAO {
 	 
 	public List<Product> getProduct();
 	
+	public List<Product> getProductByCategory(String cat);
+	
 
 }

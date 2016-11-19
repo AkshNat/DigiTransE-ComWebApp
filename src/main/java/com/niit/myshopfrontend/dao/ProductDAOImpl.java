@@ -6,17 +6,13 @@ import java.util.List;
 import com.niit.myshopfrontend.model.Product;
 
 public class ProductDAOImpl implements ProductDAO {
-
-	@Override
-	public void addProduct(Product newProduct) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public List<Product> getProduct() {
-		Product p1 = new Product("P-ILCA-99M2","cat1", "Sony DSLR","α99 II provides a back-illuminated 42.4MP 35 mm full-frame CMOS image sensor, Hybrid Phase Detection AF system, up to 12fps high-speed continuous shooting, 5-axis optical image stabilisation and advanced 4K movie recording.", 4250,true);
-		Product p2 = new Product("P-3579","cat2", "OnePlus2","OxygenOS based on Android Marshmallow 6.0.1 operating system with 2.2GHz + 1.6GHz Kryo Qualcomm Snapdragon 820 quad core processor, 14nm FinFET technology, Adreno 530 GPU, 6GB LPDDR4 RAM, 64GB internal memory (UFS 2.0 Flash Storage) and dual nano-SIM dual-standby (4G+4G) with NFC enabled and reversible type-C connector", 20000, true);
+	
+	List<Product> plist = new ArrayList<Product>();
+	
+	public  ProductDAOImpl() {
+		// TODO Auto-generated constructor stub
+		Product p1 = new Product("P-ILCA-99M2","cam", "Sony DSLR","α99 II provides a back-illuminated 42.4MP 35 mm full-frame CMOS image sensor, Hybrid Phase Detection AF system, up to 12fps high-speed continuous shooting, 5-axis optical image stabilisation and advanced 4K movie recording.", 4250,true);
+		Product p2 = new Product("P-3579","phn", "OnePlus2","OxygenOS based on Android Marshmallow 6.0.1 operating system with 2.2GHz + 1.6GHz Kryo Qualcomm Snapdragon 820 quad core processor, 14nm FinFET technology, Adreno 530 GPU, 6GB LPDDR4 RAM, 64GB internal memory (UFS 2.0 Flash Storage) and dual nano-SIM dual-standby (4G+4G) with NFC enabled and reversible type-C connector", 20000, true);
 		Product p3 = new Product("P-S2DUDZ-003","cat3", "Skull Candy","Lightweight and low-profile around-the-neck collar.\n Bluetooth® wireless with 8-hour rechargeable battery.\n Call, track and volume control via the built-in microphone and remote.", 650, true);
 		Product p4 = new Product("P-AX40","cat1", "Handy CAm","4K Ultra HD (3840 x 2160) recording of subtler detail and colour [#]Balanced Optical SteadyShot™ with Intelligent Active mode[#]26.8 mm ZEISS Vario-Sonnar® T* lens with optical 20x zoom range", 3000, true);
 		Product p5 = new Product("P-GV20","cat2", "Google Pixel","5-inch Full HD / 5.5-inch Quad HD AMOLED Gorilla Glass 4 Camera: 12.3MP rear camera ƒ/2.0 lens, PDAF, Laser, 1.55µm pixels 3450 mAh Fast charging Chips: Qualcomm Snapdragon 2.2GHz 4GB RAM 32-128GB internal storage", 30650, true);
@@ -26,9 +22,7 @@ public class ProductDAOImpl implements ProductDAO {
 		Product p9 = new Product("P-IP222","cat3", "Screen Guard","Screen Guard and Protector High Definition Clear Microfiber Cleaning Cloth Protects from Scratches Reduces Glare Bubble free Application Dust repelling 3H Hardness No Rainbow Effect PET Material", 400, true);
 		Product p10 = new Product("P-59SM02","cat4", "Fastrack 310 dmy","5ATM/50m Water resistance. Metal strap. Stainless steel back cover. 24 hour/Off set second, High precision quartz analogue movement.", 825.45, true);
 		Product p11 = new Product("P-A7PDX","cat3", "Nikon 310 dmy","Includes 8GB SD CARD + D-SLR Bag & Free HP Deskjet 1112 Printer DX D-SLR Kit + Lens Combo Offer!! #Offer lens included in D-ZOOM kit retail pack, no additional lens offer applicable. D-ZOOM kit is available in black color only.", 825.45, false);
-		
-		
-		List<Product> plist = new ArrayList<Product>();
+				
 		plist.add(p1);
 		plist.add(p2);
 		plist.add(p3);
@@ -40,8 +34,35 @@ public class ProductDAOImpl implements ProductDAO {
 		plist.add(p9);
 		plist.add(p10);
 		plist.add(p11);
-		
+	}
+
+	
+	@Override
+	public List<Product> getProduct() {
+				
 		return plist;
+	}
+
+	@Override
+	public List<Product> getProductByCategory(String cat) {
+		
+		if(cat.equals("all"))
+			return getProduct();
+		
+		List<Product> plist1 = new ArrayList<Product>();
+		for (Product p : plist)
+		{
+			if(p.getCategory().equals(cat))
+				plist1.add(p);
+		}
+		return plist;
+	}
+
+
+	@Override
+	public void addProduct(Product newProduct) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
