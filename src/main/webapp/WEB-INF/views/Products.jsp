@@ -13,11 +13,12 @@
 
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<link href="bootstrap/css/custom-style.css" rel="stylesheet" type="text/css" />
-		<link href="bootstrap/css/simple.css" rel="stylesheet" type="text/css" />
 		<link href="bootstrap/fonts/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 		<script src="bootstrap/js/jquery-3.0.0.js" type="text/javascript"></script>
 		<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="bootstrap/js/angular.min.js"></script>
+		
 
 		<title>Over 10000 Products | MyShop.in</title>
 
@@ -92,8 +93,19 @@
 }
 
 		</style>
+<script type="text/javascript">
+var obj = ${lists};
+angular.module('app', []);
+
+angular.module('app').controller('MyCtrl', function ($scope){
+	$scope.productList = obj;
+
+});
+
+
+</script>
 </head>
-<body>
+<body ng-app='app'>
 	<%@ include file="Header.jsp" %>
 
 <div class="container-fluid" style="margin-top:50px;">
@@ -113,7 +125,7 @@
 				</div>
 			</section>
 		</div>
-		<div class="col-md-9">
+		<div class="col-md-9" ng-controller="MyCtrl">
 			<h2>
 				<a href="#">${catname}</a>
 			</h2>
@@ -128,16 +140,14 @@
 								<span class="glyphicon glyphicon-th"></span>Grid</a>
 						</div>
 					</div>
-					<c:if test="${not empty lists}">
+					
 						<div id="products" class="row list-group">
-							<c:forEach var="listValue" items="${lists}">
-								<c:if test="${(param.val== listValue.category || param.val=='all') && listValue.available}">
-									<div class="item  col-xs-4 col-lg-4">
+									<div class="item  col-xs-4 col-lg-4" ng-repeat="product in productList">
 										<div class="thumbnail">
 											<img class="group list-group-image" src="bootstrap/img/placehold400x250.png" alt=""/>
 											<div class="caption">
 												<h4 class="group inner list-group-item-heading">
-													${listValue.productName}
+													{{product.productName}}
 													<a href="#">
 														<div class="pull-right" style="text-decoration: none; color: black;">
 															<i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -145,12 +155,12 @@
 													</a>
 												</h4>
 												<p class="group inner list-group-item-text desc">
-													${listValue.productDesc }</p>
+													{{product.productDesc}}</p>
 												<br>
 													<div class="row">
 														<div class="col-xs-12 col-md-6">
 															<p class="lead" style="font-size:24px; font-weight: 400;">
-																₹ ${listValue.price}</p>
+																₹ {{product.price}}</p>
 														</div>
 														<div class="col-xs-12 col-md-6">
 
@@ -164,10 +174,10 @@
 											</div>
 										</div>
 
-									</c:if>
-								</c:forEach>
+									
+								
 							</div>
-						</c:if>
+						
 					</div>
 
 				</div>

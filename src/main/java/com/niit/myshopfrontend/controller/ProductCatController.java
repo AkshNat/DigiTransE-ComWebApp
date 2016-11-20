@@ -44,8 +44,8 @@ public class ProductCatController {
 		String json;
 		json = gson.toJson(list);
 		System.out.println(json);
-		model.addAttribute("lists", list);
-//		model.addAttribute("lists", json);
+		//model.addAttribute("lists", list);
+		model.addAttribute("lists", json);
 		return "Products";
 		
 	}
